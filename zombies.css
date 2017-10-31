@@ -1,0 +1,59 @@
+body{
+  background-image: url(http://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/441050/c1e3d2008c35807925692ff7c3bbe11080ab1d1a.jpg);
+  size: 100%;
+}
+
+#title {
+  font-family: impact;
+  text-shadow: -1px 0 #e11e1e, 0 1px #e11e1e, 1px 0 #e11e1e, 0 -1px #e11e1e;
+  font-display: auto;
+  font-size: 120%;
+}
+
+#subtitle {
+  font-family: impact;
+  text-shadow: -1px 0 #e11e1e, 0 1px #e11e1e, 1px 0 #e11e1e, 0 -1px #e11e1e;
+  font-display: auto;
+  font-size: 110%;
+}
+
+#sponsorship {
+  font-family: impact;
+  text-shadow: -1px 0 #e11e1e, 0 1px #e11e1e, 1px 0 #e11e1e, 0 -1px #e11e1e;
+  font-display: auto;
+  font-size: 110%;
+}
+
+#zombie_map {
+  width: 600px;
+  height: 400px;
+  background-color: grey;
+  opacity: 1;
+}
+
+#footer {
+  font-family: cursive;
+  text-shadow: -1px 0 #e11e1e, 0 1px #e11e1e, 1px 0 #e11e1e, 0 -1px #e11e1e;
+  padding-bottom: 3%;
+  padding-left: 80%;
+}
+
+main{
+  position: relative;
+  background: #6b5e5e;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #bd0606;
+  opacity: 0.85;
+  height: 90%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+}
+
+form{
+  padding: 20px;
+  overflow: auto;
+}

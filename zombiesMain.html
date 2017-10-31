@@ -1,0 +1,63 @@
+<html>
+  <head>
+      <title>
+      zombieSurvivalMap
+      </title>
+      <link rel="stylesheet" type="text/css" href="zombies.css">
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6PabeWVK_iD4Sja1KZSOr52R-Wk1NqcE&callback=initMap">
+ </script>
+  </head>
+    <body>
+    <main>
+      <div id="title"><h1><center>Zombie Survival Polandball Edition</center></h1></div>
+      <div id="subtitle"><h2><center>Into win or into die!</h2></center></div>
+      <div id="sponsorship"><h5><center>Also sponsored by Phil Swift. SLAP ON THAT FLEXTAPE®!!!</center></h5></div>
+      <center><div id="zombie_map"></div></center>
+      <form>
+        <center>
+        <select id="icon_to_use_plndball">
+          <option value="zombie.png">Zombie</option>
+          <option value="kalishnakov.png">AK-47</option>
+          <option value="missile.png">Nuclear missile</option>
+          <option value="hospital.png">Safehouse</option>
+          <option value="Poland.png">Poland</option>
+          <option value="America.png">America</option>
+          <option value="Russia.png">Russia</option>
+          <option value="China.png">China</option>
+          <option value="Germany.png">Germany</option>
+          <option value="Italy.png">Italy</option>
+          <option value="DPRK.png">North Korea</option>
+          <option value="India.png">India</option>
+          <option value="Brazil.png">Brazil</option>
+          <option value="Flextape.png">Flextape</option>
+          <option value="phil.png">Phil Swift</option>
+          <option value="dearLeader.png">Kim Jong Un</option>
+        </select>
+        </center>
+      </form>
+    </main>
+      <script>
+      var zombie_map;
+      function initMap() {
+          zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
+          zoom: 14,
+          center: {lat: 25.197364, lng: 55.278918}
+          });
+          zombie_map.addListener('click', function(e) {
+            var location = e.latLng;
+            place_marker(location);
+          });
+      }
+      function place_marker(location) {
+          var symbol = document.getElementById('icon_to_use_plndball').value;
+          var marker = new google.maps.Marker({
+          position: location,
+          map: zombie_map,
+          icon: symbol
+          });
+          console.log(location.lat(), location.lng(), symbol);
+      }
+    </script>
+  <div id="footer"><a href=https://www.youtube.com/watch?v=0xzN6FM5x_E target="_blank" style="color: 000000"><p><h6>Sponsored by Flextape® and Phil Swift</h6></p></a></div>
+  </body>
+</html>
